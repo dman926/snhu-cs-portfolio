@@ -1,19 +1,15 @@
-# CS210 Portfolio
+# CS300 Portfolio
+
+Dennis James Stelmach
 
 - Summarize the project and what problem it was solving.
-  - This project required a way to search a list of words by their frequency counts.
-- What did you do particularly well?
-  - I created the FrequencyCounter class to analyze a list of words and their frequencies in O(n) and retrieve frequency counts in O(1).
-  - All code is well-commented.
-- Where could you enhance your code? How would these improvements make your code more efficient, secure, and so on?
-  - Testing can be put in place to ensure that every aspect is working as expected.
-- Which pieces of the code did you find most challenging to write, and how did you overcome this? What tools or resources are you adding to your support network?
-  - Reading the input file to count word frequencies was the most difficult as variable line endings were causing unexpected errors when displaying due to some line endings not being stripped before being used to set a map key. I resolved this by manually stripping unwanted characters from the map keys before setting them.
-- What skills from this project will be particularly transferable to other projects or course work?
-  - Creating CLI applications.
-  - File I/O.
-  - Utilizing efficient data structures.
+  - This project required a method to load and display a list of courses and their prerequisites using an efficient data structure.
+- How did I approach the problem?
+  - In requiring a way to store and retrieve the list of courses in an efficient manner, I performed analysis on several data structures: vectors, hash tables, and trees. In doing so, I was torn between selecting a hash table or a tree for my datastructure, as hash tables perform excellently for retrieval and insertion operations, with a time-complexity of O(1), while trees are excellent for providing inherit sorting based on keys and perform very well in retrieval and insertion. I ultimately chose a hash map as I believed the time-complexity savings for use in a large system would be beneficial, especially if caching is used in the task of printing the list of courses in alphanumeric order, since hash maps do not provide inherit sorting on keys.
+- How did you overcome any roadblocks you encountered while going throught the activities or project?
+  - Reading the input file to load the courses was difficult, as it required the validity of the file to be checked and handled appropriately. This required me to carefully review my logic and test with cases of invalid files to ensure the loading function was loading courses into my data structure correctly and did not when the input file was determined to not be correct.
+- How has your work on this project expanded your approach to designing software and developing programs?
+  - I enjoyed these activities and projects because they reinforce the need for due-diligence in code planning and execution. By doing prior research into time and space complexity of a particular feature of the project, we can see how this choice will influence the rest of the application.
 - How did you make this program maintainable, readable, and adaptable?
-  - I added comments where neccessary to explain method functionality and design choices.
-  - I followed best styling practices to improve readability.
-  - The FrequencyCounter class is generic enough to work in other applications.
+  - By using comments in an efficient manner, we can document what a function or a particular section of code does and why it was chosen at a glance instead of having to put our minds in the headspace of the original programmer and not understanding what is happening, even if that original programmer is you.
+  - By utilizing structs, classes, and small and reusable functions, we can understand the sectioning and logic of the program much more easily than a single large function with no separation of logic.

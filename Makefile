@@ -1,16 +1,13 @@
-# This is a Makefile to build and
-# run the Chada Tech Corner Grocer program.
-
-# Date: 2023 APR 016
+# Date: 2023 JUNE 14
 # Author: Dennis James Stelmach
 
 all: build
 
-build: main.cpp FrequencyCounter.cpp FrequencyCounter.h
-	g++ -Wall -o main main.cpp FrequencyCounter.cpp
+build: Stelmach_CS300_Project_Two.cpp
+	g++ -Wall -o main Stelmach_CS300_Project_Two.cpp
 
 run: build
 	./main
 
 clean:
-	rm -f main frequency.dat
+	rm -f main
